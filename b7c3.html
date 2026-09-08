@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real options, twenty-five years on: Luehrman's toolkit, and where the field stands in 2026 — CD Consulting R&amp;D</title>
+  <meta name="description" content="Two 1998 HBR articles turned the option analogy into two metrics and a picture managers can draw. Since then adoption has barely moved (26.4 % of CFOs in 2022), theory migrated to strategy, competition got its own models, and the energy transition became the new laboratory.">
+  <style>
+/* Mixed edition: light by default, dark when the system asks for it, and a manual switch
+   (remembered in this browser) that overrides the system in both directions. The two
+   palettes are those already used in this Knowledge Base: the light one of the chapter
+   indexes, the nocturnal one of entry 1. */
+:root{
+  color-scheme:light dark;
+  --bg:#f7f6f3; --panel:#ffffff; --panel-2:#efede8; --quote:#f1efea; --code:#efede8;
+  --ink:#1a1a1a; --ink-strong:#0e0e0e; --muted:#555c66; --rule:#ddd8cf; --rule-soft:#e8e4dc;
+  --accent:#3d6478; --accent-hover:#274a5c; --sel:#d9e4ec; --hover:#f3f1ec; --scroll:#c9c4ba;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+    --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+    --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+  --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+  --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px 104px}
+::selection{background:var(--sel);color:var(--ink-strong)}
+h1{font-family:var(--serif);font-size:clamp(27px,4.4vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.015em;
+  margin:0 0 18px;color:var(--ink-strong);padding-bottom:22px;border-bottom:2px solid var(--accent);text-align:center}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink-strong);
+  margin:60px 0 14px;padding-top:26px;border-top:1px solid var(--rule);scroll-margin-top:16px}
+h2#contents{border-top:none;padding-top:0;margin-top:42px}
+h3{font-size:18px;font-weight:600;margin:38px 0 10px;letter-spacing:-.005em;font-family:var(--serif);color:var(--ink-strong);scroll-margin-top:16px}
+p{margin:0 0 17px;max-width:72ch}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent-hover);text-decoration-thickness:2px}
+a.ref{font-family:var(--sans);font-size:.82em;text-decoration:none;white-space:nowrap}
+strong{font-weight:650;color:var(--ink-strong)}
+ul,ol{max-width:72ch;padding-left:24px;margin:0 0 19px}
+li{margin-bottom:10px}
+li::marker{color:var(--muted)}
+h2#contents + ol{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 22px 46px;max-width:none;font-size:15px}
+h2#contents + ol li{margin-bottom:8px}
+h2#contents + ol li::marker{color:var(--accent)}
+code{font-family:var(--mono);font-size:.87em;background:var(--code);color:var(--ink);padding:2px 6px;border-radius:4px;word-break:break-word;border:1px solid var(--rule-soft)}
+.scroll{overflow-x:auto;margin:26px 0 30px;border:1px solid var(--rule);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.55}
+thead th{background:var(--panel-2);color:var(--ink-strong);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:650;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--hover)}
+ol.srclist{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 24px 22px 24px;max-width:none;list-style:none}
+ol.srclist li{margin-bottom:15px;line-height:1.55;font-size:14px;padding-left:52px;position:relative}
+ol.srclist li:last-child{margin-bottom:0}
+ol.srclist li .tag{position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+ol.srclist a{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+*{scrollbar-color:var(--scroll) var(--bg)}
+.mark{font-family:var(--sans);font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;text-align:center}
+nav.crumbs{font-family:var(--sans);font-size:12.5px;text-align:center;color:var(--muted);margin-bottom:26px}
+nav.crumbs a{color:var(--accent)}
+.cartouche{font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:34px;padding-bottom:24px;border-bottom:1px solid var(--rule-soft)}
+.standfirst{font-family:var(--serif);font-size:16px;color:var(--muted);text-align:center;margin:0 0 8px;max-width:none}
+.meta-line{font-family:var(--sans);font-size:13px;color:var(--muted);text-align:center;margin-bottom:38px;max-width:none}
+.theme{position:fixed;top:14px;right:14px;font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--panel);color:var(--muted);border:1px solid var(--rule);border-radius:99px;padding:6px 12px;cursor:pointer}
+.theme:hover{color:var(--accent);border-color:var(--accent)}
+footer{margin-top:56px;padding-top:26px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6}
+footer p{margin-bottom:14px;max-width:none}
+footer .backlinks{text-align:center;margin-top:34px;font-size:14px}
+@media (max-width:640px){.wrap{padding:34px 16px 68px}body{font-size:16px}h2#contents + ol{padding-left:38px}.theme{top:8px;right:8px}}
+@media print{html,body{background:#fff;color:#000;font-size:11pt}.wrap{max-width:none;padding:0}.theme{display:none}
+  h1,h2,h3,strong{color:#000}h1{border-bottom-color:#000}h2{border-top-color:#999;page-break-after:avoid}a{color:#000}
+  code,.scroll,h2#contents + ol,ol.srclist{background:#fff;border-color:#bbb;color:#000}thead th{background:#eee;color:#000}
+  .scroll{page-break-inside:avoid;overflow:visible}table{min-width:0;font-size:9pt}td,th{border-bottom-color:#ccc}}
+  </style>
+  <script>(function(){try{var t=localStorage.getItem("kb-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+</head>
+<body>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+  <main class="wrap">
+    <p class="mark">CD Consulting R&amp;D</p>
+    <nav class="crumbs"><a href="../index.html">Home</a> · <a href="./">KB-FIN</a> · Entry 1</nav>
+    <p class="cartouche">KB-FIN · Entry 1 · Published 8 September 2026 · Version 1</p>
+<h1>Real options, twenty-five years on: Luehrman's toolkit, and where the field stands in 2026</h1>
+<p class="standfirst">What did Luehrman's 1998 toolkit get right, and what has the field learned about flexibility, competition and the energy transition since?</p>
+<p class="meta-line">Synthesis note compiled on 8 September 2026. It rests on two Harvard Business Review articles by Timothy A. Luehrman (1998), read in full; on four Harvard Business School readings from the same course pack that are cited by catalogue number only, because their DRM-sealed copies can no longer be opened; and on a literature search run on 2026-09-08. Figures are quoted with their source; no number in this note was computed by its author.</p>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#1-where-this-note-comes-from">1. Where this note comes from</a></li>
+<li><a href="#2-getting-a-number-the-1998-toolkit">2. Getting a number: the 1998 toolkit</a></li>
+<li><a href="#3-drawing-a-strategy-the-tomato-garden">3. Drawing a strategy: the tomato garden</a></li>
+<li><a href="#4-the-four-sealed-readings-references">4. The four sealed readings — references</a></li>
+<li><a href="#5-what-the-field-has-learned-since-1998">5. What the field has learned since 1998</a></li>
+<li><a href="#6-assessment-what-holds-what-does-not">6. Assessment: what holds, what does not</a></li>
+<li><a href="#7-sources">7. Sources</a></li>
+</ol>
+
+<h2 id="summary">Summary</h2>
+<ul><li><strong>The idea has not aged.</strong> A corporate investment that creates the right, but not the obligation, to invest later is a call option, and discounted cash flow (DCF) undervalues it because it assumes the plan will be followed whatever happens. Luehrman's two 1998 articles turned that insight into a spreadsheet-compatible method and a picture that managers can draw <a class="ref" href="#S1">[S1]</a><a class="ref" href="#S2">[S2]</a>.</li><li><strong>The method is two numbers.</strong> A value-to-cost ratio, NPVq = S ÷ PV(X), and a cumulative volatility, σ√t. Together they contain the five Black-Scholes variables, locate any project in a two-dimensional "option space", and read its value off a pre-computed table as a percentage of the underlying asset value <a class="ref" href="#S1">[S1]</a>.</li><li><strong>The picture is a garden.</strong> Six regions — invest now, maybe now, probably later, maybe later, probably never, never — replace the two verdicts of NPV. Options drift up and to the left as time passes; only luck or active management pushes them back to the right <a class="ref" href="#S2">[S2]</a>.</li><li><strong>Adoption has barely moved.</strong> In Graham's 2022 survey of 593 CFOs, 26.4 % use real options, against 20.3 % in the 1999 survey; NPV and IRR are used by 86 % and 85 % <a class="ref" href="#S3">[S3]</a>. The tool won the argument in theory and lost it in the finance department.</li><li><strong>The field moved elsewhere.</strong> Since 2017 real options theory has been reframed as a strategy theory of commitment versus flexibility <a class="ref" href="#S4">[S4]</a>; the fastest-growing applications are the energy transition and climate adaptation, where the option to defer dominates <a class="ref" href="#S5">[S5]</a><a class="ref" href="#S6">[S6]</a><a class="ref" href="#S7">[S7]</a><a class="ref" href="#S8">[S8]</a>; a 2025 proposal extends NPV to "societal real options" <a class="ref" href="#S9">[S9]</a>; and competition, the one force Luehrman treated in a sidebar, now has its own literature of real option games <a class="ref" href="#S10">[S10]</a>.</li></ul>
+
+<h2 id="1-where-this-note-comes-from">1. Where this note comes from</h2>
+<p>The starting point is a set of readings from an MBA course in entrepreneurial finance (2005–2006). Two of them are ordinary PDF reprints of Harvard Business Review articles and were read in full. Four others are Harvard Business School notes and cases distributed in 2003 as SealedMedia "SoftSEAL" files, a digital-rights-management format whose licence servers no longer answer; their catalogue numbers are readable in the file headers and are listed in section 4 so that the reader can obtain current copies. This note therefore synthesises what Luehrman wrote, references what the sealed readings covered, and adds what a search of the 2017–2026 literature says about how the field evolved.</p>
+
+<h2 id="2-getting-a-number-the-1998-toolkit">2. Getting a number: the 1998 toolkit</h2>
+<p>Luehrman's first article ("Investment Opportunities as Real Options: Getting Started on the Numbers", HBR July–August 1998) sets itself a modest goal: to apply option pricing to strategic decisions without specialised staff, using the DCF spreadsheets a company already has <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>The mapping.</strong> A project that requires spending X to acquire operating assets worth S, where the decision can be deferred for t years, is treated as a European call: S is the stock price, X the exercise price, t the time to expiration, the risk-free rate r the time value of money, and the standard deviation of project returns σ the riskiness of the assets. When t = 0 the option value equals max(S − X, 0), which is exactly the NPV rule; the two approaches diverge only when the decision can wait <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>Two metrics instead of five variables.</strong> Deferral adds value for two reasons: interest is earned on the capital not yet spent, and the world may change before the decision is made. Luehrman captures the first by replacing X with its present value PV(X) = X ÷ (1 + r)^t and expressing the result as a ratio, NPVq = S ÷ PV(X), which is greater than one whenever the "modified" NPV is positive. He captures the second by cumulative volatility σ√t, the standard deviation of returns scaled by the time available. NPVq combines S, X, r and t; σ√t combines σ and t; between them they hold everything Black-Scholes needs <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>Pricing the space.</strong> Because the two metrics determine the option value as a percentage of S, a single table — Luehrman calls it "pricing the space" — serves every project. In his example a project with NPVq = 1.0 and σ√t = 0.5 reads 19.7 % of S: for assets worth 100, an option worth 19.7 against a conventional NPV of −5 <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>Seven steps on a worked case.</strong> The Franklin Chemical example is a two-phase plant expansion whose conventional NPV is 0.1 million dollars. The steps are: recognise the option (the lumpy, discretionary year-3 spending is an expansion option); map it; rearrange the DCF sheet to separate phase 1 from phase 2 and isolate S and X; set a benchmark; attach values to the five variables; combine them into the two metrics; read the table. Phase 1 alone has an NPV of 16.3 million; the phase-2 option, valued at about 19 % of assets worth 255.7 million, adds 48.6 million; the proposal is worth about 64.9 million rather than 0.1 <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>A correction of DCF on the way.</strong> Separating the phases exposes a common mistake: the discretionary year-3 outlay had been discounted at the 12 % risk-adjusted rate applied to operating cash flows, although construction costs are far less exposed to product-market risk. Discounted at the 5.5 % risk-free rate, the phase-2 benchmark falls from −16.2 to −69.6 million — the option framework starts by making the conventional number worse, then more than recovers it <a class="ref" href="#S1">[S1]</a>.</p>
+<p><strong>Where the toolkit stops.</strong> Luehrman lists his own limits: X is assumed certain; volatility is assumed constant; the table prices European options, whereas most real options are American and carry predictable costs of waiting (pre-emption by a competitor, a regulatory deadline); and the Black-Scholes assumptions about the distribution of returns and the tradability of the underlying assets may not hold. In those cases the framework "still yields qualitative insights" but the numbers become less reliable <a class="ref" href="#S1">[S1]</a>. The variable managers estimate worst is σ; his advice is to take an educated guess in the 30–60 % range for manufacturing assets, use historical or implied volatilities of comparable traded assets, or simulate the distribution of project returns from the spreadsheet <a class="ref" href="#S1">[S1]</a>.</p>
+
+<h2 id="3-drawing-a-strategy-the-tomato-garden">3. Drawing a strategy: the tomato garden</h2>
+<p>The second article ("Strategy as a Portfolio of Real Options", HBR September–October 1998) extends the two metrics from one project to a strategy, defined as a sequence of related options rather than a series of static cash flows <a class="ref" href="#S2">[S2]</a>.</p>
+<p><strong>Option space and its six regions.</strong> With value-to-cost (NPVq) on the horizontal axis and volatility (σ√t) on the vertical, a curve of NPV = 0 and the vertical line NPVq = 1 cut the space into six regions, each with a prescription: (1) invest now — time has run out and NPVq &gt; 1; (2) maybe now — in the money, consider early exercise if waiting has predictable costs; (3) probably later — out of the money but NPVq &gt; 1 with time left, cultivate; (4) maybe later — NPVq &lt; 1 but volatility or time give it a chance; (5) probably never; (6) never. The gardening metaphor is deliberate: ripe, rotten, and in-between tomatoes, and a gardener who waters and weeds rather than only picking <a class="ref" href="#S2">[S2]</a>.</p>
+<p><strong>A portfolio read twice.</strong> Six hypothetical projects, each on assets of 100 million, have conventional NPVs of +10, +10, −10, −10, −10 and −10: DCF accepts two and rejects four, for a portfolio value of 20 million. Located in option space by their t and σ, the same projects land in six different regions and the portfolio is worth about 74 million; two of the "rejected" projects together are worth about 34 million as options and should be cultivated or sold, not abandoned <a class="ref" href="#S2">[S2]</a>.</p>
+<p><strong>Laws of motion.</strong> Options tend to drift upward (σ√t shrinks as t runs out) and to the left (PV(X) rises as discounting shortens) — a promising project moves from "probably later" to "maybe later" in a year if nothing else changes. Managers can counter the drift by raising S (prices, volumes, tax savings), lowering X, or raising σ√t, for instance through operating leverage; every such action also spills over onto neighbouring options in the portfolio <a class="ref" href="#S2">[S2]</a>.</p>
+<p><strong>Nested options.</strong> A strategy is a chain: WeatherIze's licence buys the option to introduce a product, which buys the option to expand, which buys the option to expand again — a call on a call. The innermost option must be valued first because it is part of the underlying asset of the next; a rise in the volatility of the last option therefore moves the earlier ones to the right. Drawing the circles (solid for S, dashed for X) lets a management team compare two strategies visually before computing them <a class="ref" href="#S2">[S2]</a>.</p>
+<p>Luehrman's closing advice is the same in both articles: option pricing should complement the existing capital-budgeting system, not replace it, and its purpose is to bring financial insight into strategy while strategies are still being invented, not afterwards as a check on the numbers <a class="ref" href="#S1">[S1]</a><a class="ref" href="#S2">[S2]</a>.</p>
+
+<h2 id="4-the-four-sealed-readings-references">4. The four sealed readings — references</h2>
+<p>The following readings were part of the same course pack. Their DRM copies cannot be opened; each is identified by the Harvard Business School catalogue number found in its file header.</p>
+<div class="scroll"><table><thead><tr><th>Reading</th><th>HBS number</th><th>What it adds to the two articles</th></tr></thead><tbody>
+<tr><td>Luehrman, <em>Capital Projects as Real Options: An Introduction</em> (background note, 1994, rev. 1995)</td><td>295-074</td><td>The original mapping of a project onto a call, the motivation for viewing strategic projects as options, and the expanded option-pricing table that the HBR article refers to <a class="ref" href="#S11">[S11]</a></td></tr>
+<tr><td>Desai and Tufano, <em>Laura Martin: Real Options and the Cable Industry</em> (case, 1999)</td><td>201-004</td><td>An applied case: an equity analyst values a cable operator's unused network capacity ("stealth tier") as a real option and contrasts DCF, multiples and option methods <a class="ref" href="#S12">[S12]</a></td></tr>
+<tr><td>HBS background notes, "Simulations of Prices", parts A and B</td><td>203-056, 203-057</td><td>Titles not verified online; from their place in the pack, the simulation of price paths that feeds the volatility estimate σ — the input Luehrman identifies as the hardest to obtain</td></tr>
+</tbody></table></div>
+<p>Current copies of 295-074 and 201-004 are sold by Harvard Business Publishing <a class="ref" href="#S11">[S11]</a><a class="ref" href="#S12">[S12]</a>.</p>
+
+<h2 id="5-what-the-field-has-learned-since-1998">5. What the field has learned since 1998</h2>
+
+<h3 id="5-1-adoption-stalled">5.1 Adoption stalled</h3>
+<p>Graham and Harvey's 1999 survey of 392 CFOs found that about a quarter of respondents used some options approach when evaluating growth opportunities <a class="ref" href="#S13">[S13]</a>. Graham's 2022 follow-up, on 593 CFOs, reports that 26.4 % of firms use real options, "slightly higher" than the 20.3 % of 1999, while NPV and IRR rose to 86 % and 85 % and payback fell to 48 % <a class="ref" href="#S3">[S3]</a>. Twenty-three years of textbooks, software and articles moved the needle by six points. The most likely reasons are the ones Luehrman himself named: σ is not in the spreadsheet, most real options are American with costs of waiting, and the analysis requires judgement about what is discretionary.</p>
+<h3 id="5-2-from-a-valuation-technique-to-a-theory-of-strategy">5.2 From a valuation technique to a theory of strategy</h3>
+<p>Trigeorgis and Reuer's 2017 review in the <em>Strategic Management Journal</em> recasts real options theory as a strategic-management theory organised around two tensions — commitment versus flexibility, and competition versus cooperation — and proposes a taxonomy of the research <a class="ref" href="#S4">[S4]</a>. A recurring finding of that stream is that "real options reasoning" is used as a heuristic even where the calculation is beyond a firm's means, which is how small and young firms under high uncertainty actually behave <a class="ref" href="#S4">[S4]</a>. Luehrman's garden anticipated this: the value of the picture is that it can be drawn before the numbers are precise.</p>
+<h3 id="5-3-competition-has-its-own-models">5.3 Competition has its own models</h3>
+<p>Luehrman treated pre-emption as a "predictable cost of waiting" to be added to the framework. The interaction of several option holders became a field of its own: real option games, in which game theory supplies the equilibrium and option theory the timing thresholds. A 2025 systematic review in <em>Computers &amp; Operations Research</em> classifies the pre-emption and war-of-attrition models and their solution methods, and confirms the intuition that the threat of a rival compresses option value and can force early, sometimes value-destroying, exercise <a class="ref" href="#S10">[S10]</a>.</p>
+<h3 id="5-4-the-energy-transition-is-the-new-laboratory">5.4 The energy transition is the new laboratory</h3>
+<p>Two systematic reviews published in 2025–2026 cover real options in renewable energy: one identifies 288 peer-reviewed studies between 2000 and 2025 across twelve databases <a class="ref" href="#S5">[S5]</a>, the other focuses on hybrid renewable systems <a class="ref" href="#S6">[S6]</a>. Both report the same pattern: the option to defer (timing) is the flexibility that matters most for every technology; binomial lattices and Monte Carlo simulation dominate the methods, with hybrid, fuzzy and AI-assisted models appearing after 2015; and incorporating uncertainty tends to delay investment, which is a policy problem when the public goal is to accelerate it <a class="ref" href="#S5">[S5]</a><a class="ref" href="#S6">[S6]</a><a class="ref" href="#S7">[S7]</a>.</p>
+<h3 id="5-5-climate-adaptation-options-among-a-menu-of-methods">5.5 Climate adaptation: options among a menu of methods</h3>
+<p>For public investment under deep uncertainty, the World Bank's 2012 review of decision methods placed cost-benefit analysis with real options next to robust decision making and climate-informed decision analysis, and concluded that no single method can be prescribed — a menu is needed, with guidance on which fits which context <a class="ref" href="#S8">[S8]</a>. The OECD's 2025 report on adaptation finance repeats the point: real options approaches can handle the uncertainty of climate impacts, while life-cycle costing captures the trade-off between higher upfront costs and long-term benefits <a class="ref" href="#S14">[S14]</a>.</p>
+<h3 id="5-6-sustainability-real-options">5.6 Sustainability real options</h3>
+<p>Han Smit's 2025 article in the <em>California Management Review</em> addresses the objective function rather than the technique. Investment appraisal, he argues, rests on a narrow view of shareholder value and on uncertain climate consequences; firms nevertheless hold options to adapt. He proposes an extended NPV that includes societal real options: timing, expansion and growth options for phasing in renewables, and contraction, abandonment and switching options for phasing out fossil fuels <a class="ref" href="#S9">[S9]</a>. It is Luehrman's portfolio with a second bottom line.</p>
+<h3 id="5-7-digital-and-ai-investments-as-staged-options">5.7 Digital and AI investments as staged options</h3>
+<p>The information-systems literature adopted the framing early — platform adoption as a growth option <a class="ref" href="#S15">[S15]</a> — and recent work applies it to Industry 5.0 and AI programmes, where rapid technological change makes staged commitments and the right to abandon more valuable than a single large bet <a class="ref" href="#S16">[S16]</a>. The framing fits: an AI pilot is a small X that buys a large, uncertain S with high σ — exactly the region Luehrman labels "probably later, cultivate".</p>
+
+<h2 id="6-assessment-what-holds-what-does-not">6. Assessment: what holds, what does not</h2>
+<ol><li><strong>The mapping still holds and is still the entry point.</strong> Nothing in the later literature replaces the five-variable correspondence; it has been refined, not overturned <a class="ref" href="#S1">[S1]</a><a class="ref" href="#S4">[S4]</a>.</li><li><strong>Volatility is still the soft spot.</strong> Every review notes that σ drives the result and is the least observable input; simulation, which the sealed HBS notes taught, remains the honest way to estimate it <a class="ref" href="#S1">[S1]</a><a class="ref" href="#S5">[S5]</a><a class="ref" href="#S6">[S6]</a>.</li><li><strong>Competition changes the prescription.</strong> In contested markets the "probably later" region shrinks; the rival is the squirrel in the garden, and the 2025 real option games review is the formal treatment of what Luehrman handled in a sidebar <a class="ref" href="#S2">[S2]</a><a class="ref" href="#S10">[S10]</a>.</li><li><strong>The picture outlived the number.</strong> Practitioners adopted the reasoning far more than the arithmetic — 26.4 % in 2022 — and strategy scholars turned the reasoning into theory <a class="ref" href="#S3">[S3]</a><a class="ref" href="#S4">[S4]</a>.</li><li><strong>The objective function is widening.</strong> Sustainability real options and climate-adaptation appraisal ask the tool to value outcomes for society, not only for shareholders; the tool can, provided S is defined accordingly <a class="ref" href="#S8">[S8]</a><a class="ref" href="#S9">[S9]</a><a class="ref" href="#S14">[S14]</a>.</li></ol>
+
+<h2 id="7-sources">7. Sources</h2>
+<p>Primary readings (read in full): [S1], [S2]. Sealed readings (cited by catalogue number): [S11], [S12], and HBS 203-056 / 203-057. Literature search: consulted on 2026-09-08.</p>
+<ol class="srclist">
+<li id="S1"><span class="tag">S1</span> Timothy A. Luehrman, "Investment Opportunities as Real Options: Getting Started on the Numbers", <em>Harvard Business Review</em>, July–August 1998, reprint 98404 — <a href="https://hbr.org/1998/07/investment-opportunities-as-real-options-getting-started-on-the-numbers" rel="noopener noreferrer" target="_blank">https://hbr.org/1998/07/investment-opportunities-as-real-options-getting-started-on-the-numbers</a> (primary).</li>
+<li id="S2"><span class="tag">S2</span> Timothy A. Luehrman, "Strategy as a Portfolio of Real Options", <em>Harvard Business Review</em>, September–October 1998, reprint 98506 — <a href="https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options" rel="noopener noreferrer" target="_blank">https://hbr.org/1998/09/strategy-as-a-portfolio-of-real-options</a> (primary).</li>
+<li id="S3"><span class="tag">S3</span> John R. Graham, "Corporate Finance and Reality", Presidential Address, <em>Journal of Finance</em> 77(4), 2022; NBER Working Paper 29841 — <a href="https://www.nber.org/system/files/working_papers/w29841/w29841.pdf" rel="noopener noreferrer" target="_blank">https://www.nber.org/system/files/working_papers/w29841/w29841.pdf</a> (academic, survey data).</li>
+<li id="S4"><span class="tag">S4</span> Lenos Trigeorgis and Jeffrey J. Reuer, "Real options theory in strategic management", <em>Strategic Management Journal</em> 38(1), 2017, 42–63 — <a href="https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2593" rel="noopener noreferrer" target="_blank">https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2593</a> (academic review).</li>
+<li id="S5"><span class="tag">S5</span> <em>Real Option Analysis for Renewable Energy: A Systematic Review</em>, International Journal of Applied Mathematics and Theoretical Physics, 2026 — <a href="https://www.sciencepublishinggroup.com/article/10.11648/j.ijamtp.20261201.11" rel="noopener noreferrer" target="_blank">https://www.sciencepublishinggroup.com/article/10.11648/j.ijamtp.20261201.11</a> (academic review; 288 studies, 2000–2025).</li>
+<li id="S6"><span class="tag">S6</span> <em>The Real Option Approach to Investment Decisions in Hybrid Renewable Energy Systems: A Systematic Literature Review</em>, <em>Energies</em> 18(20), 5535, 2025 — <a href="https://doi.org/10.3390/en18205535" rel="noopener noreferrer" target="_blank">https://doi.org/10.3390/en18205535</a> (academic review).</li>
+<li id="S7"><span class="tag">S7</span> <em>Exploring the efficacy of renewable energy support policies in uncertain environments: A real options analysis</em>, <em>Energy Economics</em>, 2024 — <a href="https://www.sciencedirect.com/science/article/abs/pii/S0140988324001750" rel="noopener noreferrer" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S0140988324001750</a> (academic).</li>
+<li id="S8"><span class="tag">S8</span> Stéphane Hallegatte et al., <em>Investment Decision Making Under Deep Uncertainty — Application to Climate Change</em>, World Bank Policy Research Working Paper 6193, 2012 — <a href="https://documents.worldbank.org/curated/en/194831468136208564/Investment-decision-making-under-deep-uncertainty-application-to-climate-change" rel="noopener noreferrer" target="_blank">https://documents.worldbank.org/curated/en/194831468136208564/Investment-decision-making-under-deep-uncertainty-application-to-climate-change</a> (official).</li>
+<li id="S9"><span class="tag">S9</span> Han Smit, "Sustainability Real Options", <em>California Management Review</em> 67(3), 2025, 55–85 — <a href="https://journals.sagepub.com/doi/10.1177/00081256251331264" rel="noopener noreferrer" target="_blank">https://journals.sagepub.com/doi/10.1177/00081256251331264</a> ; abstract at <a href="https://cmr.berkeley.edu/2025/05/67-3-sustainability-real-options/" rel="noopener noreferrer" target="_blank">https://cmr.berkeley.edu/2025/05/67-3-sustainability-real-options/</a> (academic).</li>
+<li id="S10"><span class="tag">S10</span> <em>Investments under strategic competition and uncertainty: A literature review on real option games</em>, <em>Computers &amp; Operations Research</em>, 2025 — <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305054825003570" rel="noopener noreferrer" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S0305054825003570</a> (academic review).</li>
+<li id="S11"><span class="tag">S11</span> Timothy A. Luehrman, <em>Capital Projects as Real Options: An Introduction</em>, HBS Background Note 295-074, 1994, rev. 1995 — <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=7577" rel="noopener noreferrer" target="_blank">https://www.hbs.edu/faculty/Pages/item.aspx?num=7577</a> ; <a href="https://hbr.org/product/capital-projects-as-real-options-an-introduction/295074-PDF-ENG" rel="noopener noreferrer" target="_blank">https://hbr.org/product/capital-projects-as-real-options-an-introduction/295074-PDF-ENG</a> (primary, not re-read).</li>
+<li id="S12"><span class="tag">S12</span> Mihir A. Desai and Peter Tufano, <em>Laura Martin: Real Options and the Cable Industry</em>, HBS Case 201-004, 1999 — <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=27393" rel="noopener noreferrer" target="_blank">https://www.hbs.edu/faculty/Pages/item.aspx?num=27393</a> ; <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=298768" rel="noopener noreferrer" target="_blank">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=298768</a> (primary, not re-read).</li>
+<li id="S13"><span class="tag">S13</span> John R. Graham and Campbell R. Harvey, "The theory and practice of corporate finance: evidence from the field", <em>Journal of Financial Economics</em> 60, 2001, 187–243 — <a href="https://people.duke.edu/~charvey/Research/Published_Papers/P67_The_theory_and.pdf" rel="noopener noreferrer" target="_blank">https://people.duke.edu/~charvey/Research/Published_Papers/P67_The_theory_and.pdf</a> (academic, survey data).</li>
+<li id="S14"><span class="tag">S14</span> OECD, <em>Scaling up finance and investment for climate change adaptation</em>, Net Zero+, 2025 — <a href="https://www.oecd.org/en/publications/scaling-finance-and-investment-for-climate-adaptation_eeec8b52-en.html" rel="noopener noreferrer" target="_blank">https://www.oecd.org/en/publications/scaling-finance-and-investment-for-climate-adaptation_eeec8b52-en.html</a> (official).</li>
+<li id="S15"><span class="tag">S15</span> Robert G. Fichman, "Real Options and IT Platform Adoption: Implications for Theory and Practice", <em>Information Systems Research</em> 15(2), 2004 — <a href="https://pubsonline.informs.org/doi/10.1287/isre.1040.0021" rel="noopener noreferrer" target="_blank">https://pubsonline.informs.org/doi/10.1287/isre.1040.0021</a> (academic).</li>
+<li id="S16"><span class="tag">S16</span> <em>Managing Strategic Flexibility in Industry 5.0 Transition: An Integrated Real Options and Strategic Foresight Approach</em>, Springer, 2025 — <a href="https://link.springer.com/chapter/10.1007/978-3-031-74779-3_5" rel="noopener noreferrer" target="_blank">https://link.springer.com/chapter/10.1007/978-3-031-74779-3_5</a> (academic).</li>
+</ol>
+<p><em>Limits of this note.</em> The four sealed readings are described from their catalogue entries and their position in the course pack, not from their text; the titles of HBS 203-056 and 203-057 could not be verified online. Findings attributed to [S5], [S6] and [S10] are taken from their published abstracts and summaries, the full texts being behind paywalls at the time of writing. Luehrman's worked figures are reproduced from the articles as illustrations of the method, not as data.</p>
+
+    <footer>
+      <p>This text is © CD Consulting R&amp;D and licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank">CC BY-NC-ND 4.0</a> (attribution, non-commercial, no derivatives). Quoted figures and sentences remain the property of their publishers, cited in the Sources section.</p>
+      <p class="backlinks"><a href="./">← KB-FIN</a> · <a href="../index.html">CD Consulting R&amp;D</a></p>
+    </footer>
+  </main>
+  <script>(function(){var b=document.getElementById("theme");b.addEventListener("click",function(){var r=document.documentElement;var cur=r.getAttribute("data-theme");var sys=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var now=(cur||sys)==="dark"?"light":"dark";r.setAttribute("data-theme",now);try{localStorage.setItem("kb-theme",now);}catch(e){}});})();</script>
+</body>
+</html>

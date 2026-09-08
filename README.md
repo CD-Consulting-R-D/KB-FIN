@@ -3,7 +3,7 @@
 Chapitre **KB-FIN** — Finance, economics, law & risk datamart — de la Knowledge Base **CD Consulting R&D**
 (organisation GitHub [CD-Consulting-R-D](https://github.com/CD-Consulting-R-D)).
 
-**Statut : créé le 08/09/2026, aucune entrée servie depuis ce dépôt.** Chapitre : finance, économie, droit et datamart risque.
+**Statut : créé le 08/09/2026, première entrée publiée le 8 September 2026 : `b7c3.html` (Real options, twenty-five years on: Luehrman's toolkit, and where the field stands in 2026).** Chapitre : finance, économie, droit et datamart risque.
 
 ## Rôle
 
