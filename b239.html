@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BCBS 239, thirteen years on: what the Basel principles on risk data asked banks to see, why so few got there, and what supervisors expect in 2026 — CD Consulting R&amp;D</title>
+  <meta name="description" content="In 2013 the Basel Committee asked the largest banks to aggregate their risk data quickly and accurately enough to see their risks in a crisis, by January 2016. Six progress reports later, only two of 31 global banks were fully compliant in 2022. The ECB&#x27;s 2024 guide now sets minimum expectations, from attribute-level data lineage to risk reports produced within twenty working days, and its 2026-28 priorities still see no improvement in the average score.">
+  <style>
+/* Mixed edition: light by default, dark when the system asks for it, and a manual switch
+   (remembered in this browser) that overrides the system in both directions. The two
+   palettes are those already used in this Knowledge Base: the light one of the chapter
+   indexes, the nocturnal one of entry 1. */
+:root{
+  color-scheme:light dark;
+  --bg:#f7f6f3; --panel:#ffffff; --panel-2:#efede8; --quote:#f1efea; --code:#efede8;
+  --ink:#1a1a1a; --ink-strong:#0e0e0e; --muted:#555c66; --rule:#ddd8cf; --rule-soft:#e8e4dc;
+  --accent:#3d6478; --accent-hover:#274a5c; --sel:#d9e4ec; --hover:#f3f1ec; --scroll:#c9c4ba;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+    --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+    --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+  --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+  --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px 104px}
+::selection{background:var(--sel);color:var(--ink-strong)}
+h1{font-family:var(--serif);font-size:clamp(27px,4.4vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.015em;
+  margin:0 0 18px;color:var(--ink-strong);padding-bottom:22px;border-bottom:2px solid var(--accent);text-align:center}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink-strong);
+  margin:60px 0 14px;padding-top:26px;border-top:1px solid var(--rule);scroll-margin-top:16px}
+h2#contents{border-top:none;padding-top:0;margin-top:42px}
+h3{font-size:18px;font-weight:600;margin:38px 0 10px;letter-spacing:-.005em;font-family:var(--serif);color:var(--ink-strong);scroll-margin-top:16px}
+p{margin:0 0 17px;max-width:72ch}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent-hover);text-decoration-thickness:2px}
+a.ref{font-family:var(--sans);font-size:.82em;text-decoration:none;white-space:nowrap}
+strong{font-weight:650;color:var(--ink-strong)}
+ul,ol{max-width:72ch;padding-left:24px;margin:0 0 19px}
+li{margin-bottom:10px}
+li::marker{color:var(--muted)}
+h2#contents + ol{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 22px 46px;max-width:none;font-size:15px}
+h2#contents + ol li{margin-bottom:8px}
+h2#contents + ol li::marker{color:var(--accent)}
+code{font-family:var(--mono);font-size:.87em;background:var(--code);color:var(--ink);padding:2px 6px;border-radius:4px;word-break:break-word;border:1px solid var(--rule-soft)}
+.scroll{overflow-x:auto;margin:26px 0 30px;border:1px solid var(--rule);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.55}
+thead th{background:var(--panel-2);color:var(--ink-strong);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:650;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--hover)}
+ol.srclist{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 24px 22px 24px;max-width:none;list-style:none}
+ol.srclist li{margin-bottom:15px;line-height:1.55;font-size:14px;padding-left:52px;position:relative}
+ol.srclist li:last-child{margin-bottom:0}
+ol.srclist li .tag{position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+ol.srclist a{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+*{scrollbar-color:var(--scroll) var(--bg)}
+.mark{font-family:var(--sans);font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;text-align:center}
+nav.crumbs{font-family:var(--sans);font-size:12.5px;text-align:center;color:var(--muted);margin-bottom:26px}
+nav.crumbs a{color:var(--accent)}
+.cartouche{font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:34px;padding-bottom:24px;border-bottom:1px solid var(--rule-soft)}
+.standfirst{font-family:var(--serif);font-size:16px;color:var(--muted);text-align:center;margin:0 0 8px;max-width:none}
+.meta-line{font-family:var(--sans);font-size:13px;color:var(--muted);text-align:center;margin-bottom:38px;max-width:none}
+.theme{position:fixed;top:14px;right:14px;font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--panel);color:var(--muted);border:1px solid var(--rule);border-radius:99px;padding:6px 12px;cursor:pointer}
+.theme:hover{color:var(--accent);border-color:var(--accent)}
+footer{margin-top:56px;padding-top:26px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6}
+footer p{margin-bottom:14px;max-width:none}
+footer .backlinks{text-align:center;margin-top:34px;font-size:14px}
+@media (max-width:640px){.wrap{padding:34px 16px 68px}body{font-size:16px}h2#contents + ol{padding-left:38px}.theme{top:8px;right:8px}}
+@media print{html,body{background:#fff;color:#000;font-size:11pt}.wrap{max-width:none;padding:0}.theme{display:none}
+  h1,h2,h3,strong{color:#000}h1{border-bottom-color:#000}h2{border-top-color:#999;page-break-after:avoid}a{color:#000}
+  code,.scroll,h2#contents + ol,ol.srclist{background:#fff;border-color:#bbb;color:#000}thead th{background:#eee;color:#000}
+  .scroll{page-break-inside:avoid;overflow:visible}table{min-width:0;font-size:9pt}td,th{border-bottom-color:#ccc}}
+  
+/* Start-here primer for the non-specialist reader (editorial charter, rule 1) */
+aside.primer{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:18px 22px;margin:8px 0 34px;font-size:15.5px;line-height:1.6;max-width:none}
+aside.primer .primer-title{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 10px;max-width:none}
+aside.primer p{margin:0 0 10px;max-width:72ch}
+aside.primer p:last-child{margin-bottom:0}
+aside.primer em{font-style:italic;color:var(--ink)}
+@media print{aside.primer{background:#fff;border-color:#bbb}}
+.enjeu{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--accent);text-align:center;margin:0 0 8px}
+
+:root{--accent:#2f6b4f;--accent-hover:#22503b;--kb-c:#2f6b4f;
+  --kb-forme:polygon(50% 0,100% 50%,50% 100%,0 50%);--kb-fond:var(--kb-c);--kb-bord:0;--kb-rayon:0;
+  --kb-filet:linear-gradient(90deg,var(--kb-c),var(--kb-c))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#7fc39f;--accent-hover:#a5d8bb;--kb-c:#7fc39f}}
+:root[data-theme="dark"]{--accent:#7fc39f;--accent-hover:#a5d8bb;--kb-c:#7fc39f}
+h1{border-bottom-color:transparent;position:relative}
+h1::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-2px;
+  width:170px;height:4px;background:var(--kb-filet)}
+.mark::before{content:"";display:inline-block;box-sizing:border-box;width:10px;height:10px;
+  vertical-align:1px;margin-right:11px;background:var(--kb-fond);clip-path:var(--kb-forme);
+  border:var(--kb-bord);border-radius:var(--kb-rayon)}
+  </style>
+  <script>(function(){try{var t=localStorage.getItem("kb-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+</head>
+<body>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+  <main class="wrap">
+    <p class="mark">CD Consulting R&amp;D</p>
+    <nav class="crumbs"><a href="../index.html">Home</a> · <a href="./">KB-FIN</a> · Entry 2</nav>
+    <p class="cartouche">KB-FIN · Entry 2 · Published 2026-09-23 · Version 1</p>
+<h1>BCBS 239, thirteen years on: what the Basel principles on risk data asked banks to see, why so few got there, and what supervisors expect in 2026</h1>
+<p class="standfirst">What did the Basel Committee ask banks to see in 2013, why has almost none of them got there, and what do supervisors expect now?</p>
+<p class="enjeu">If you own risk data at a bank, this is what supervisors now expect you to see, and how fast — from the 2013 principles to the ECB guide of 2024.</p>
+<p class="meta-line">Synthesis note compiled on 23 September 2026. It rests on the Basel Committee's 2013 principles and its six progress reports (2013-2023), on the European Central Bank's thematic review of 2018 and guide of 2024, taken from the publishers' own websites, and on official pages consulted on 23 September 2026. Figures are quoted with their source; no number in this note was computed by its author.</p>
+<aside class="primer">
+<p class="primer-title">Start here — if the subject is new to you</p>
+<p>When a large bank runs into trouble, its board and its supervisors ask a simple question first: how much are we exposed, to whom, and where? During the global financial crisis many banks could not answer it quickly, because the figures lived in dozens of systems that did not agree with one another. The Basel Committee, the forum where banking supervisors write the international rules, responded with a short set of principles on risk data aggregation and risk reporting, known by the number of the document, BCBS 239.</p>
+<p>This matters because a bank that cannot see its risks in time cannot manage them, and neither can the people who supervise it.</p>
+<p>This entry explains what the principles ask, reads them through the image of a radar, follows the Committee's progress reports and the recent European guide, and says what all of this means for a data team today.</p>
+</aside>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#1-why-the-committee-wrote-fourteen-principles-in-2013">1. Why the Committee wrote fourteen principles in 2013</a></li>
+<li><a href="#2-the-fourteen-principles-in-four-groups">2. The fourteen principles in four groups</a></li>
+<li><a href="#3-the-radar-what-a-bank-must-be-able-to-see-and-how-fast">3. The radar: what a bank must be able to see, and how fast</a></li>
+<li><a href="#4-thirteen-years-of-progress-reports-what-moved-what-did-not">4. Thirteen years of progress reports: what moved, what did not</a></li>
+<li><a href="#5-the-ecb-guide-of-2024-and-what-supervisors-now-expect">5. The ECB guide of 2024 and what supervisors now expect</a></li>
+<li><a href="#6-what-this-means-for-a-data-function-in-2026">6. What this means for a data function in 2026</a></li>
+<li><a href="#7-sources">7. Sources</a></li>
+</ol>
+
+<h2 id="1-why-the-committee-wrote-fourteen-principles-in-2013">1. Why the Committee wrote fourteen principles in 2013</h2>
+<p>The principles open with a diagnosis rather than a rule. One of the most significant lessons of the crisis that began in 2007, the Committee wrote, was that banks' information technology and data architectures could not support the broad management of financial risks: many banks were unable to aggregate their exposures and identify concentrations "quickly and accurately" at group level, across business lines and between legal entities <a class="ref" href="#S1">[S1]</a>. Some of them could not manage their risks properly for that reason alone, with consequences for the banks and for the financial system as a whole <a class="ref" href="#S1">[S1]</a>.</p>
+<p>Three motives run through the introduction: faster and better decisions by the board and senior management; easier resolution, since a bank whose risk data can be assembled by legal entity and business line is easier to rescue or wind down; and memory. The Committee warned that, as the crisis faded, investment in data and systems, whose benefits arrive only over the long term, would risk being pushed back <a class="ref" href="#S1">[S1]</a>. The rest of this entry is, in a sense, a test of that warning.</p>
+<p>The scope was narrow and the deadline firm. Banks named global systemically important banks (G-SIBs) by the Financial Stability Board in November 2011 or November 2012 had to meet the principles by January 2016, at group level and on a solo basis; banks designated later would have three years, and national supervisors were strongly encouraged to apply them to domestic systemically important banks on the same basis <a class="ref" href="#S1">[S1]</a>. They cover risk management data, key internal risk models and outsourced processes, and define risk data aggregation as defining, gathering and processing risk data according to the bank's reporting needs, so that it can measure its performance against its risk appetite <a class="ref" href="#S1">[S1]</a>.</p>
+<p>The 2013 text is not a directive or a regulation but a supervisory standard: the Committee agrees on expectations, and national and European authorities make them bite through their own law and supervisory review. In December 2019 the principles were folded into the consolidated Basel Framework as chapter SRP36, inside the supervisory review process <a class="ref" href="#S8">[S8]</a>. In the euro area, the European Central Bank reads them through the governance and risk-management articles of the Capital Requirements Directive and uses them as its benchmark of good practice <a class="ref" href="#S11">[S11]</a>.</p>
+
+<h2 id="2-the-fourteen-principles-in-four-groups">2. The fourteen principles in four groups</h2>
+<p>The principles are organised under four headings <a class="ref" href="#S1">[S1]</a>. Eleven are addressed to banks and three to supervisors.</p>
+<ul><li><strong>Overarching governance and infrastructure.</strong> Principle 1, <em>governance</em>: risk data aggregation and reporting are subject to strong governance, with the board overseeing senior management's ownership of the programme. Principle 2, <em>data architecture and IT infrastructure</em>: the bank designs, builds and maintains an architecture that supports aggregation and reporting not only in normal times but also in stress or crisis.</li><li><strong>Risk data aggregation capabilities.</strong> Principle 3, <em>accuracy and integrity</em>, with aggregation on a largely automated basis to minimise errors. Principle 4, <em>completeness</em>: all material risk data across the group, available by business line, legal entity, asset type, industry and region. Principle 5, <em>timeliness</em>: up-to-date aggregates, at a pace that depends on how volatile and how critical the risk is. Principle 6, <em>adaptability</em>: the capacity to answer on-demand and ad hoc requests, including in a crisis and from supervisors.</li><li><strong>Risk reporting practices.</strong> Principle 7, <em>accuracy</em>, with reports reconciled and validated. Principle 8, <em>comprehensiveness</em>: all material risk areas. Principle 9, <em>clarity and usefulness</em>: concise, understandable, tailored to the reader. Principle 10, <em>frequency</em>, set by the board and senior management according to how fast the risk can change. Principle 11, <em>distribution</em> to the right people, with confidentiality preserved.</li><li><strong>Supervisory review, tools and cooperation.</strong> Principle 12, <em>review</em> of each bank's compliance; Principle 13, <em>remedial actions and supervisory measures</em>, including capital measures under the supervisory review process; Principle 14, <em>home/host cooperation</em> between supervisors of cross-border groups.</li></ul>
+<p>Two ideas in the text explain how the groups fit together, and most of what went wrong afterwards. Governance, architecture and infrastructure are described as preconditions for compliance with all the other principles <a class="ref" href="#S1">[S1]</a>. And aggregation and reporting, although treated separately, are inseparable in practice: good reports rely on strong aggregation, and governance carries the flow from one to the other <a class="ref" href="#S1">[S1]</a>. The principles are to be met simultaneously; trade-offs between them are tolerated only in exceptional cases, must not materially affect risk decisions, and must be known to the board <a class="ref" href="#S1">[S1]</a>.</p>
+<figure style="margin:28px 0;padding:0">
+<svg viewBox="0 0 680 400" role="img" aria-labelledby="f1t f1d" style="width:100%;height:auto;display:block;font-family:var(--sans)">
+<title id="f1t">The fourteen BCBS 239 principles in four groups</title>
+<desc id="f1d">Eleven principles for banks are drawn as three stacked layers: governance and infrastructure at the base, risk data aggregation in the middle, risk reporting at the top, with arrows showing that each layer feeds the next. A fourth column on the right holds the three principles addressed to supervisors.</desc>
+<text x="250" y="22" text-anchor="middle" style="font-size:12px;letter-spacing:.08em;fill:var(--muted)">ELEVEN PRINCIPLES FOR BANKS</text>
+<text x="592" y="22" text-anchor="middle" style="font-size:12px;letter-spacing:.08em;fill:var(--muted)">THREE FOR SUPERVISORS</text>
+<rect x="10" y="40" width="480" height="100" rx="8" style="fill:none;stroke:var(--kb-c, var(--accent));stroke-width:1"/>
+<text x="22" y="59" style="font-size:12.5px;font-weight:600;fill:var(--kb-c, var(--accent))">III · Risk reporting practices — the screen</text>
+<rect x="22" y="70" width="84.8" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="64.4" y="96.1667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P7</text>
+<text x="64.4" y="109.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Accuracy</text>
+<rect x="114.8" y="70" width="84.8" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="157.2" y="89.6667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P8</text>
+<text x="157.2" y="102.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Comprehen-</text>
+<text x="157.2" y="115.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">siveness</text>
+<rect x="207.6" y="70" width="84.8" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="250" y="89.6667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P9</text>
+<text x="250" y="102.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Clarity and</text>
+<text x="250" y="115.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">usefulness</text>
+<rect x="300.4" y="70" width="84.8" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="342.8" y="96.1667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P10</text>
+<text x="342.8" y="109.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Frequency</text>
+<rect x="393.2" y="70" width="84.8" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="435.6" y="96.1667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P11</text>
+<text x="435.6" y="109.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Distribution</text>
+<rect x="10" y="160" width="480" height="100" rx="8" style="fill:none;stroke:var(--kb-c, var(--accent));stroke-width:1"/>
+<text x="22" y="179" style="font-size:12.5px;font-weight:600;fill:var(--kb-c, var(--accent))">II · Risk data aggregation capabilities — the instrument</text>
+<rect x="22" y="190" width="108" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="76" y="209.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P3</text>
+<text x="76" y="222.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Accuracy and</text>
+<text x="76" y="235.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">integrity</text>
+<rect x="138" y="190" width="108" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="192" y="216.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P4</text>
+<text x="192" y="229.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Completeness</text>
+<rect x="254" y="190" width="108" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="308" y="216.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P5</text>
+<text x="308" y="229.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Timeliness</text>
+<rect x="370" y="190" width="108" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="424" y="216.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P6</text>
+<text x="424" y="229.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Adaptability</text>
+<rect x="10" y="280" width="480" height="100" rx="8" style="fill:var(--kb-c, var(--accent));fill-opacity:.10;stroke:var(--kb-c, var(--accent));stroke-width:1"/>
+<text x="22" y="299" style="font-size:12.5px;font-weight:600;fill:var(--kb-c, var(--accent))">I · Governance and infrastructure — the preconditions</text>
+<rect x="22" y="310" width="224" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="134" y="336.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P1</text>
+<text x="134" y="349.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Governance</text>
+<rect x="254" y="310" width="224" height="58" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="366" y="329.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P2</text>
+<text x="366" y="342.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Data architecture</text>
+<text x="366" y="355.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">and IT infrastructure</text>
+<line x1="250" y1="278" x2="250" y2="270" style="stroke:var(--kb-c, var(--accent));stroke-width:1.5"/><path d="M250 262 l-5 8 h10 z" style="fill:var(--kb-c, var(--accent))"/>
+<line x1="250" y1="158" x2="250" y2="150" style="stroke:var(--kb-c, var(--accent));stroke-width:1.5"/><path d="M250 142 l-5 8 h10 z" style="fill:var(--kb-c, var(--accent))"/>
+<rect x="510" y="40" width="164" height="340" rx="8" style="fill:none;stroke:var(--kb-c, var(--accent));stroke-width:1;stroke-dasharray:5 4"/>
+<text x="592" y="59" text-anchor="middle" style="font-size:12.5px;font-weight:600;fill:var(--kb-c, var(--accent))">IV · Supervisory review,</text>
+<text x="592" y="75" text-anchor="middle" style="font-size:12.5px;font-weight:600;fill:var(--kb-c, var(--accent))">tools and cooperation</text>
+<rect x="522" y="92" width="140" height="80" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="592" y="129.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P12</text>
+<text x="592" y="142.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Review</text>
+<rect x="522" y="188" width="140" height="80" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="592" y="212.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P13</text>
+<text x="592" y="225.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Remedial actions</text>
+<text x="592" y="238.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">and supervisory</text>
+<text x="592" y="251.167" text-anchor="middle" style="font-size:11px;fill:var(--ink)">measures</text>
+<rect x="522" y="284" width="140" height="80" rx="6" style="fill:var(--panel);stroke:var(--rule);stroke-width:1"/>
+<text x="592" y="314.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P14</text>
+<text x="592" y="327.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">Home/host</text>
+<text x="592" y="340.667" text-anchor="middle" style="font-size:11px;fill:var(--ink)">cooperation</text>
+<text x="250" y="396" text-anchor="middle" style="font-size:11px;fill:var(--muted)">Data flow: each layer can only be as good as the layer beneath it.</text>
+</svg>
+<figcaption style="font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5"><strong>Figure 1.</strong> The fourteen principles of January 2013, grouped under the four headings of the text. Governance and infrastructure are the preconditions for the other principles; aggregation and reporting are treated separately but are inseparable in practice. Drawn for this entry from <a class="ref" href="#S1">[S1]</a>.</figcaption>
+</figure>
+<p>One practical warning for readers who come from capital regulation: these four groups are not the three pillars of the Basel capital framework (minimum requirements, supervisory review, market discipline). BCBS 239 lives inside the second of those pillars <a class="ref" href="#S8">[S8]</a>; its own "groups" describe a data chain, not a capital structure.</p>
+
+<h2 id="3-the-radar-what-a-bank-must-be-able-to-see-and-how-fast">3. The radar: what a bank must be able to see, and how fast</h2>
+<p>Say the acronym of the subject aloud, RDARR for <em>risk data aggregation and risk reporting</em>, and it sounds like "radar". The pun is useful because it describes the job exactly. A radar is judged on what it can detect, how far, how sharply and how often the picture refreshes; a bank's risk data are judged on the same things.</p>
+<p>Read that way, the aggregation principles describe the performance of the instrument. Accuracy and integrity are its resolution: a blurred echo that must be corrected by hand is not a measurement. Completeness is its range and coverage: a blind sector over one legal entity or one asset class is where the next surprise will come from. Timeliness is its sweep rate: a screen that refreshes once a month shows where the risk was, not where it is. Adaptability is the ability to point the antenna at a new target on request, including in a crisis and when a supervisor asks for a view of the exposures that no standard report provides <a class="ref" href="#S1">[S1]</a>. The reporting principles describe the screen and the operator: the picture must be accurate, cover every material risk, be readable at a glance, arrive at the right frequency and reach the people who must act on it <a class="ref" href="#S1">[S1]</a>. Governance and infrastructure are the mast and the power supply. The three supervisory principles are the periodic inspection of the installation.</p>
+<p>The image also explains a pattern that the progress reports kept finding. Banks scored themselves best on the screen and worst on the mast: in the first self-assessment of 2013, the three principles with the highest reported compliance concerned reporting (distribution, comprehensiveness, clarity), while the three lowest were data architecture, adaptability and accuracy <a class="ref" href="#S2">[S2]</a>. The Committee called the result difficult to interpret, since the weakest principles were the preconditions of the strongest <a class="ref" href="#S2">[S2]</a>. A well-drawn screen fed by an unreliable antenna is exactly the failure mode the principles were written to prevent.</p>
+<p>The European Central Bank has since put a number on the sweep rate. Its 2024 guide reports that supervisors had observed production times of forty working days or more for monthly risk reports, and states that a bank generally cannot react in time if a monthly or quarterly risk report takes more than twenty working days to produce <a class="ref" href="#S11">[S11]</a>. For stress situations it expects aggregation to adapt to ad hoc requests with enough granularity, at entity and group level, without being hampered by fragmented systems or manual steps <a class="ref" href="#S11">[S11]</a>.</p>
+<figure style="margin:28px 0;padding:0">
+<svg viewBox="0 0 680 520" role="img" aria-labelledby="f2t f2d" style="width:100%;height:auto;display:block;font-family:var(--sans)">
+<title id="f2t">The radar of compliance: average ratings per principle, 2014 and 2017</title>
+<desc id="f2d">A radar chart with eleven spokes, one per principle addressed to banks, on a scale from 1 at the centre to 4 (fully compliant) at the outer ring. Two shapes: the banks' own average ratings in 2014 and the supervisors' average ratings in 2017. Both shapes are dented at data architecture and accuracy and bulge at distribution and comprehensiveness, and neither reaches the outer ring on any spoke.</desc>
+<path d="M340 250 L253.757 109.333 A165 165 0 0 1 340 85 Z" style="fill:var(--kb-c, var(--accent));fill-opacity:.07"/>
+<circle cx="340" cy="250" r="55" style="fill:none;stroke:var(--rule);stroke-width:1;stroke-dasharray:3 4"/>
+<text x="336" y="192" text-anchor="end" style="font-size:10px;fill:var(--muted)">2</text>
+<circle cx="340" cy="250" r="110" style="fill:none;stroke:var(--rule);stroke-width:1;stroke-dasharray:3 4"/>
+<text x="336" y="137" text-anchor="end" style="font-size:10px;fill:var(--muted)">3</text>
+<circle cx="340" cy="250" r="165" style="fill:none;stroke:var(--rule);stroke-width:1;"/>
+<text x="336" y="82" text-anchor="end" style="font-size:10px;fill:var(--muted)">4</text>
+<line x1="340" y1="250" x2="340.0" y2="85.0" style="stroke:var(--rule);stroke-width:1"/>
+<text x="340.0" y="67.0" text-anchor="middle" style="font-size:11px;fill:var(--ink)">P1 Governance</text>
+<line x1="340" y1="250" x2="429.2" y2="111.2" style="stroke:var(--rule);stroke-width:1"/>
+<text x="437.9" y="101.7" text-anchor="start" style="font-size:11px;fill:var(--ink)">P2 Architecture &amp; IT</text>
+<line x1="340" y1="250" x2="490.1" y2="181.5" style="stroke:var(--rule);stroke-width:1"/>
+<text x="504.6" y="178.8" text-anchor="start" style="font-size:11px;fill:var(--ink)">P3 Accuracy &amp; integrity</text>
+<line x1="340" y1="250" x2="503.3" y2="273.5" style="stroke:var(--rule);stroke-width:1"/>
+<text x="519.2" y="279.8" text-anchor="start" style="font-size:11px;fill:var(--ink)">P4 Completeness</text>
+<line x1="340" y1="250" x2="464.7" y2="358.1" style="stroke:var(--rule);stroke-width:1"/>
+<text x="476.8" y="372.5" text-anchor="start" style="font-size:11px;fill:var(--ink)">P5 Timeliness</text>
+<line x1="340" y1="250" x2="386.5" y2="408.3" style="stroke:var(--rule);stroke-width:1"/>
+<text x="391.0" y="435.7" text-anchor="start" style="font-size:11px;fill:var(--ink)">P6 Adaptability</text>
+<line x1="340" y1="250" x2="293.5" y2="408.3" style="stroke:var(--rule);stroke-width:1"/>
+<text x="289.0" y="435.7" text-anchor="end" style="font-size:11px;fill:var(--ink)">P7 Report accuracy</text>
+<line x1="340" y1="250" x2="215.3" y2="358.1" style="stroke:var(--rule);stroke-width:1"/>
+<text x="203.2" y="372.5" text-anchor="end" style="font-size:11px;fill:var(--ink)">P8 Comprehensiveness</text>
+<line x1="340" y1="250" x2="176.7" y2="273.5" style="stroke:var(--rule);stroke-width:1"/>
+<text x="160.8" y="279.8" text-anchor="end" style="font-size:11px;fill:var(--ink)">P9 Clarity</text>
+<line x1="340" y1="250" x2="189.9" y2="181.5" style="stroke:var(--rule);stroke-width:1"/>
+<text x="175.4" y="178.8" text-anchor="end" style="font-size:11px;fill:var(--ink)">P10 Frequency</text>
+<line x1="340" y1="250" x2="250.8" y2="111.2" style="stroke:var(--rule);stroke-width:1"/>
+<text x="242.1" y="101.7" text-anchor="end" style="font-size:11px;fill:var(--ink)">P11 Distribution</text>
+<polygon points="340.0,149.4 382.5,183.8 415.0,215.7 441.8,264.6 411.9,312.3 364.8,334.4 314.1,338.1 245.6,331.8 225.7,266.4 241.4,205.0 270.7,142.2" style="fill:none;stroke:var(--muted);stroke-width:1.6;stroke-dasharray:6 4"/>
+<polygon points="340.0,145.5 391.4,170.0 420.0,213.4 443.4,264.9 417.7,317.4 369.4,350.3 313.2,341.3 255.6,323.1 229.5,265.9 241.4,205.0 270.7,142.2" style="fill:var(--kb-c, var(--accent));fill-opacity:.16;stroke:var(--kb-c, var(--accent));stroke-width:2"/>
+<line x1="150" y1="498" x2="180" y2="498" style="stroke:var(--muted);stroke-width:1.6;stroke-dasharray:6 4"/>
+<text x="186" y="502" style="font-size:11.5px;fill:var(--ink)">Banks' self-assessment, 2014</text>
+<rect x="410" y="492" width="30" height="12" style="fill:var(--kb-c, var(--accent));fill-opacity:.16;stroke:var(--kb-c, var(--accent));stroke-width:2"/>
+<text x="446" y="502" style="font-size:11.5px;fill:var(--ink)">Supervisors, 2017</text>
+<text x="340" y="470" text-anchor="middle" style="font-size:10.5px;fill:var(--muted)">Rings: 2 materially non-compliant · 3 largely compliant · 4 fully compliant (centre = 1)</text>
+</svg>
+<figcaption style="font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5"><strong>Figure 2.</strong> The radar turned on the radar: average compliance ratings for each of the eleven principles addressed to banks, on the Committee's scale from 1 (not implemented) to 4 (fully compliant). Dashed line: the banks' own average ratings in the 2014 questionnaire <a class="ref" href="#S3">[S3]</a>. Filled shape: supervisors' average ratings in the 2017 assessment <a class="ref" href="#S5">[S5]</a>. The two exercises differ in assessor and sample, so the comparison is indicative only; in both, no spoke reaches the outer ring. Drawn for this entry from the published tables.</figcaption>
+</figure>
+
+<h2 id="4-thirteen-years-of-progress-reports-what-moved-what-did-not">4. Thirteen years of progress reports: what moved, what did not</h2>
+<p>The Committee committed in 2013 to track the G-SIBs' progress and to report to the Financial Stability Board at least once a year from the end of 2013 <a class="ref" href="#S1">[S1]</a>. It has published six progress reports since. Read in sequence, they tell a consistent story.</p>
+<p><strong>2013 and 2015 — the banks assess themselves.</strong> Thirty G-SIBs answered a questionnaire of 87 requirements in 2013; on a scale from 1 (worst) to 4 (fully compliant) the average across the eleven bank principles was 2.8, and nearly half of the banks reported material non-compliance on architecture, adaptability and accuracy <a class="ref" href="#S2">[S2]</a>. The second questionnaire, answered in 2014, showed only minor improvement, with averages ranging from 2.43 for data architecture to 3.33 for distribution, and a worrying shift in expectations: 14 G-SIBs now said they would miss the January 2016 deadline on at least one principle, against 10 a year earlier <a class="ref" href="#S3">[S3]</a>. The Committee added that self-assessed compliance dates might be "overly ambitious" <a class="ref" href="#S3">[S3]</a>.</p>
+<p><strong>2017 — the deadline passes.</strong> The first report based on supervisors' own ratings covered the 30 banks subject to the 2016 deadline and found compliance "unsatisfactory": only one bank fully complied with all the principles, and half of the banks were materially non-compliant with Principle 2 on architecture and infrastructure <a class="ref" href="#S4">[S4]</a>.</p>
+<p><strong>2018 — marginal progress, sliding plans.</strong> Three G-SIBs were rated fully compliant, and most banks had made at best marginal progress <a class="ref" href="#S5">[S5]</a>. The reasons were named plainly: the complexity and interdependence of IT projects, underestimated legacy problems, and higher supervisory expectations as supervisors looked more closely <a class="ref" href="#S5">[S5]</a>. The same report recorded a design choice that shapes every later debate: the Committee had decided not to prescribe objective or quantitative benchmarks for judging compliance <a class="ref" href="#S5">[S5]</a>.</p>
+<p><strong>2020 — none.</strong> As of end-2018, none of the 34 G-SIBs assessed was fully compliant, with data architecture and IT infrastructure still the main obstacle; the Committee nonetheless saw tangible progress in governance, aggregation and reporting, and noted that many banks had widened their programmes to regulatory and financial reporting and resolution planning <a class="ref" href="#S6">[S6]</a>. The drop from three to zero should not be read as pure regression: the sample and the supervisory bar had both moved <a class="ref" href="#S5">[S5]</a> <a class="ref" href="#S6">[S6]</a>.</p>
+<p><strong>2023 — two out of thirty-one.</strong> Nearly ten years after publication, only two of the 31 banks assessed in 2022 were fully compliant, and not a single principle was fully implemented across all banks <a class="ref" href="#S7">[S7]</a>. The diagnosis had shifted from technology to management: adoption programmes were "often underfunded, limited in scope" and short of attention from boards and senior management, and several banks still lacked a common taxonomy and complete data lineage <a class="ref" href="#S7">[S7]</a>. The pandemic and other stress events had exposed banks with fragmented IT landscapes <a class="ref" href="#S7">[S7]</a>. For the first time, the Committee asked supervisors to consider more forceful measures for long-standing deficiencies, naming capital add-ons, restrictions on capital distributions and fines, alongside more intensive tools such as on-site inspections, deep dives and fire drills <a class="ref" href="#S7">[S7]</a>.</p>
+<p>What moved, then, is governance and awareness: programmes, roadmaps and board attention exist where they did not. What did not move is the hard core the Committee flagged in its very first report, the architecture that lets a group assemble one consistent number from many systems. No report has been published since November 2023. In January 2026 the Committee issued an informational newsletter drawn from exchanges with supervisors and industry, which lists the same obstacles, governance, end-to-end lineage, ad hoc reporting in a crisis and alignment across borders, and describes the use of artificial intelligence and automation in this field as still at an early stage; the newsletter states that it is not new supervisory guidance <a class="ref" href="#S9">[S9]</a>.</p>
+
+<h2 id="5-the-ecb-guide-of-2024-and-what-supervisors-now-expect">5. The ECB guide of 2024 and what supervisors now expect</h2>
+<p>In the euro area, the European Central Bank took the subject into its own supervisory programme early. Its thematic review, launched in 2016 on 25 significant institutions, concluded in May 2018 that implementation was unsatisfactory and that none of them, including those that were G-SIBs, had fully implemented the principles; the root weakness was a lack of clarity about who is responsible and accountable for data quality across business, control and IT functions <a class="ref" href="#S10">[S10]</a>. A letter to all significant institutions followed in 2019 <a class="ref" href="#S11">[S11]</a>.</p>
+<p>The Guide on effective risk data aggregation and risk reporting, published in May 2024, is blunter still. The ECB judged progress "generally insufficient", recorded that risk data aggregation and reporting was the worst-rated sub-category of internal governance in its 2023 supervisory review, and observed large-scale miscalculations of key ratios caused by reconciliation errors and manual adjustments <a class="ref" href="#S11">[S11]</a>. The guide does not create new requirements; it sets minimum supervisory expectations in seven areas <a class="ref" href="#S11">[S11]</a>:</p>
+<ol><li><strong>The management body</strong> owns the subject: sufficient knowledge of data and IT, approval of the data governance framework with detailed data-quality requirements and indicators, and oversight of remediation.</li><li><strong>A sufficient scope</strong>: all material legal entities, risks and reports, starting from the key risk indicators and the critical data elements that feed them, and extending to financial and supervisory reporting.</li><li><strong>A data governance framework</strong> with named data owners responsible from capture to report, a central data governance function and a validation function independent of both.</li><li><strong>An integrated data architecture</strong>: a group-wide dictionary, a metadata repository and complete, current data lineage down to the level of the data attribute.</li><li><strong>Group-wide data quality management</strong>, with reconciliations (automated where appropriate) and indicators for accuracy, completeness and timeliness.</li><li><strong>Timely internal risk reporting</strong>: frequency matched to how fast the risk moves, production time short enough to act on (the twenty-working-day benchmark above), and capabilities for stress situations.</li><li><strong>Effective implementation programmes</strong>, adequately resourced, with one or two members of the management body personally responsible for delivery.</li></ol>
+<p>The guide also spells out escalation. Missed milestones or material shortcomings, such as inaccurate reporting of key risk indicators, can lead to enforcement measures, sanctions and capital add-ons, and deficiencies in governance can prompt a reassessment of the suitability of the responsible board members and, in severe cases, their removal <a class="ref" href="#S11">[S11]</a>.</p>
+<p>The years since have confirmed the direction rather than the destination. In February 2025 the ECB reported, from its 2024 targeted reviews, that many banks still lacked a recent gap analysis against the principles or credible timelines, and that the number of institutions without fully adequate capabilities was still too high; it announced an escalation process with interim milestones and binding measures where needed <a class="ref" href="#S12">[S12]</a>. Its annual report on 2025 describes an approach applied to all supervised banks, with clear timelines and interim milestones, and gradual progress over three years <a class="ref" href="#S14">[S14]</a>. Its supervisory priorities for 2026-28 keep the subject among the vulnerabilities to remedy and report that the 2025 supervisory review showed "no improvement in the relevant average sub-score" compared with the previous year <a class="ref" href="#S13">[S13]</a>. None of these official pages reports a penalty imposed specifically for risk data deficiencies; the periodic penalty payments the ECB announced in 2025 concerned climate-related risk management <a class="ref" href="#S14">[S14]</a>.</p>
+
+<h2 id="6-what-this-means-for-a-data-function-in-2026">6. What this means for a data function in 2026</h2>
+<p>For a chief data officer, a risk data team or an IT architect in a bank, the texts converge on a short list of practical consequences.</p>
+<ul><li><strong>Start from the board's numbers, not from the data lake.</strong> The ECB's scope runs top-down: the key risk indicators in internal, financial and supervisory reports, then the critical data elements that feed them <a class="ref" href="#S11">[S11]</a>.</li><li><strong>Lineage is an expectation, not an aspiration.</strong> Supervisors ask for complete, current lineage at attribute level, from capture to report <a class="ref" href="#S11">[S11]</a>, and Basel still names incomplete lineage as a persistent obstacle <a class="ref" href="#S7">[S7]</a> <a class="ref" href="#S9">[S9]</a>.</li><li><strong>Measure the sweep rate.</strong> Report production time is now a supervisory metric, with twenty working days as the ECB's threshold <a class="ref" href="#S11">[S11]</a>; the fire drill under stress is the test of adaptability <a class="ref" href="#S7">[S7]</a> <a class="ref" href="#S11">[S11]</a>.</li><li><strong>Name owners, and give them teeth.</strong> Reviews since 2018 trace the failure to blurred responsibility for data quality <a class="ref" href="#S10">[S10]</a> <a class="ref" href="#S11">[S11]</a>; the guide expects data owners from capture to report, a central governance function and board members personally accountable <a class="ref" href="#S11">[S11]</a>.</li><li><strong>Fund the mast before the screen.</strong> Architecture, adaptability and accuracy were the weakest principles in 2013 <a class="ref" href="#S2">[S2]</a>, and fragmented, legacy infrastructure was still the leading obstacle in 2023 <a class="ref" href="#S7">[S7]</a>.</li><li><strong>Treat automation and artificial intelligence as consumers of data quality, not substitutes for it.</strong> Many banks still lack the quality data such projects require <a class="ref" href="#S7">[S7]</a> <a class="ref" href="#S9">[S9]</a>.</li></ul>
+<p>The principles themselves have not changed a word since 2013. What has changed is the posture of the supervisors who apply them: from self-assessment questionnaires to on-site inspections, fire drills, named board members and the explicit possibility of capital consequences.</p>
+
+<h2 id="7-sources">7. Sources</h2>
+<p>All sources were consulted on 23 September 2026 at the publishers' own websites. The Basel Committee's reports were read from their PDF editions; the older bis.org addresses now redirect to the publication pages given below.</p>
+<ol class="srclist">
+<li id="S1"><span class="tag">S1</span> Official (standard-setter). Basel Committee on Banking Supervision, <em>Principles for effective risk data aggregation and risk reporting</em>, January 2013 (published 9 January 2013). <a href="https://www.bis.org/publ/bcbs239.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/publ/bcbs239.htm</a> — consulted 23 September 2026.</li>
+<li id="S2"><span class="tag">S2</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the principles for effective risk data aggregation and risk reporting</em>, 18 December 2013. <a href="https://www.bis.org/publ/bcbs268.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/publ/bcbs268.htm</a> — consulted 23 September 2026.</li>
+<li id="S3"><span class="tag">S3</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the principles for effective risk data aggregation and risk reporting</em>, 23 January 2015. <a href="https://www.bis.org/bcbs/publ/d308.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/bcbs/publ/d308.htm</a> — consulted 23 September 2026.</li>
+<li id="S4"><span class="tag">S4</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the "Principles for effective risk data aggregation and risk reporting"</em>, 28 March 2017. <a href="https://www.bis.org/bcbs/publ/d399.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/bcbs/publ/d399.htm</a> — consulted 23 September 2026.</li>
+<li id="S5"><span class="tag">S5</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the "Principles for effective risk data aggregation and risk reporting"</em>, 21 June 2018. <a href="https://www.bis.org/bcbs/publ/d443.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/bcbs/publ/d443.htm</a> — consulted 23 September 2026.</li>
+<li id="S6"><span class="tag">S6</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the Principles for effective risk data aggregation and risk reporting</em>, 29 April 2020. <a href="https://www.bis.org/bcbs/publ/d501.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/bcbs/publ/d501.htm</a> — consulted 23 September 2026.</li>
+<li id="S7"><span class="tag">S7</span> Official (standard-setter progress report). Basel Committee on Banking Supervision, <em>Progress in adopting the Principles for effective risk data aggregation and risk reporting</em>, 28 November 2023. <a href="https://www.bis.org/bcbs/publ/d559.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/bcbs/publ/d559.htm</a> — consulted 23 September 2026.</li>
+<li id="S8"><span class="tag">S8</span> Official (consolidated standard). Basel Committee on Banking Supervision, <em>Basel Framework</em>, chapter SRP36 "Risk data aggregation and risk reporting", version in force from 15 December 2019. <a href="https://www.bis.org/basel_framework/chapter/SRP/36.htm" rel="noopener noreferrer" target="_blank">https://www.bis.org/basel_framework/chapter/SRP/36.htm</a> — consulted 23 September 2026.</li>
+<li id="S9"><span class="tag">S9</span> Official (standard-setter newsletter). Basel Committee on Banking Supervision, <em>Implementation of the Principles for effective risk data aggregation and risk reporting (BCBS 239 Principles)</em>, newsletter, 6 January 2026. <a href="https://www.bis.org/publications/implementation-principles-effective-risk-data-aggregation-and-risk-reporting-bcbs-239-principles" rel="noopener noreferrer" target="_blank">https://www.bis.org/publications/implementation-principles-effective-risk-data-aggregation-and-risk-reporting-bcbs-239-principles</a> — consulted 23 September 2026.</li>
+<li id="S10"><span class="tag">S10</span> Official (supervisory report). European Central Bank, Banking Supervision, <em>Report on the Thematic Review on effective risk data aggregation and risk reporting</em>, May 2018. <a href="https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.BCBS_239_report_201805.pdf" rel="noopener noreferrer" target="_blank">https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.BCBS_239_report_201805.pdf</a> — consulted 23 September 2026.</li>
+<li id="S11"><span class="tag">S11</span> Official (supervisory guide). European Central Bank, Banking Supervision, <em>Guide on effective risk data aggregation and risk reporting</em>, May 2024. <a href="https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guides240503_riskreporting.en.pdf" rel="noopener noreferrer" target="_blank">https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guides240503_riskreporting.en.pdf</a> — consulted 23 September 2026.</li>
+<li id="S12"><span class="tag">S12</span> Official (supervisory newsletter). European Central Bank, Banking Supervision, "Sound risk data reporting: key to better decision-making and resilience", Supervision Newsletter, 19 February 2025. <a href="https://www.bankingsupervision.europa.eu/press/supervisory-newsletters/newsletter/2025/html/ssm.nl250219.en.html" rel="noopener noreferrer" target="_blank">https://www.bankingsupervision.europa.eu/press/supervisory-newsletters/newsletter/2025/html/ssm.nl250219.en.html</a> — consulted 23 September 2026.</li>
+<li id="S13"><span class="tag">S13</span> Official (supervisory priorities). European Central Bank, Banking Supervision, <em>Supervisory priorities 2026-28</em>, November 2025. <a href="https://www.bankingsupervision.europa.eu/framework/priorities/html/ssm.supervisory_priorities202511.en.html" rel="noopener noreferrer" target="_blank">https://www.bankingsupervision.europa.eu/framework/priorities/html/ssm.supervisory_priorities202511.en.html</a> — consulted 23 September 2026.</li>
+<li id="S14"><span class="tag">S14</span> Official (annual report). European Central Bank, <em>ECB Annual Report on supervisory activities 2025</em>. <a href="https://www.bankingsupervision.europa.eu/press/other-publications/annual-report/html/ssm.ar2025~6ee989dc7e.en.html" rel="noopener noreferrer" target="_blank">https://www.bankingsupervision.europa.eu/press/other-publications/annual-report/html/ssm.ar2025~6ee989dc7e.en.html</a> — consulted 23 September 2026.</li>
+</ol>
+<p><strong>Limits.</strong> This entry rests on official texts only: the Basel Committee's principles, its six progress reports and one newsletter, and the European Central Bank's review, guide and supervisory pages; consultancy and vendor literature was left aside, and so were national transpositions outside the euro area. The long reports were read through their summaries, results sections and the passages cited, not line by line; the newsletter, the 2025 and 2026 ECB pages and the SRP36 chapter were read in their web versions. Compliance ratings are self-assessments until 2014 and supervisors' judgements afterwards, on a four-point scale without quantitative benchmarks, and the sample of banks changes from one report to the next; comparisons across years are indicative only. The radar reading of the principles is an interpretation offered for teaching purposes, not the Committee's own language. No figure in this entry was computed by us: each is quoted from its source, and the reader is invited to check the originals before relying on any of them.</p>
+
+    <footer>
+      <p>This text is © CD Consulting R&amp;D and licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank">CC BY-NC-ND 4.0</a> (attribution, non-commercial, no derivatives). Quoted figures and sentences remain the property of their publishers, cited in the Sources section.</p>
+      <p class="backlinks"><a href="./">← KB-FIN</a> · <a href="../index.html">CD Consulting R&amp;D</a></p>
+    </footer>
+  </main>
+  <script>(function(){var b=document.getElementById("theme");b.addEventListener("click",function(){var r=document.documentElement;var cur=r.getAttribute("data-theme");var sys=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var now=(cur||sys)==="dark"?"light":"dark";r.setAttribute("data-theme",now);try{localStorage.setItem("kb-theme",now);}catch(e){}});})();</script>
+</body>
+</html>
